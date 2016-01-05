@@ -1,9 +1,11 @@
 # -*- coding: utf-8 -*-
+
 """
 Created on Sat Oct 31 22:44:29 2015
 
 @author: TsingJyujing
 """
+
 import csv
 
 def write_raw(filename,data):#快速存储得到的数据
@@ -39,12 +41,12 @@ def read_strmat(filename,division_char):
         rtn.append(x)
     csvfile.close()
     return rtn
+    
 def write_strmat(filename,str_mat,division_char):
     csvfile = file(filename, 'wb')
     writer = csv.writer(csvfile,delimiter=division_char)
     writer.writerows(str_mat)
     csvfile.close()
-            
     
 if __name__=="__main__":
     print "Usage: from list_file_io import *"
